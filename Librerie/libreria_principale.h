@@ -18,7 +18,7 @@ void hello_world();
 
 
 //Funzioni su FILE [FILE]
-FILE *FILE_apri_file(int MAX_FILENAME_SIZE);
+FILE *FILE_apri_file(int MAX_FILENAME_SIZE, char *TYPE);
 int FILE_leggi_file(FILE *fp, int r, int c, char mat[MAX_MAT_R][MAX_MAT_C]);
 
 //Funzioni di ricerca [find]

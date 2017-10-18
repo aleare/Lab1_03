@@ -4,15 +4,17 @@ void hello_world(void) {
     printf("Hello, World!\n");
 }
 //Funzioni su FILE [FILE]
-FILE *FILE_apri_file(int MAX_FILENAME_SIZE) {
+FILE *FILE_apri_file(int MAX_FILENAME_SIZE, char *TYPE) {
     FILE *fp=NULL;
+    int TYPE_ERR=strcmp("w",TYPE)||strcmp("r",TYPE)||strcmp("rw",TYPE);
+    assert(TYPE_ERR);
     char nomefile[MAX_FILENAME_SIZE];
     do{
-        printf("Inserire il nome del file da aprire:...\n");
+        printf("Inserire il nome del file...\n");
         scanf("%s",nomefile);
-        fp=fopen(nomefile,"r");
+        fp=fopen(nomefile,TYPE);
         if (fp==NULL){
-            printf("File non aperto correttamente... Riprovare");
+            printf("File non aperto/creato correttamente... Riprovare");
         }
     }   while (fp==NULL);
     return fp;

@@ -1,5 +1,5 @@
 cmake_minimum_required(VERSION 3.8)
-project(Nome_Progetto) #nome del progetto da cambiare
+project(Lab1_03) #nome del progetto da cambiare
 set(CARTELLA_LIBRERIE §CMAKE_CURRENT_SOURCE_DIR/Librerie)
 add_subdirectory(Librerie)
 set(CMAKE_C_STANDARD 99) #Standard C99
